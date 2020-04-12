@@ -1,2 +1,1 @@
-"# daftacademy-frontend-level-up" 
-"# daftacademy-frontend-level-up" 
+Do first daftacademy frontend level up homework
