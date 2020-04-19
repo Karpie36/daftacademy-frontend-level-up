@@ -1,0 +1,12 @@
+@mixin itemSize($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin fontParameters($family, $size, $weight, $stretch, $style) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  font-stretch: $stretch;
+  font-style: $style;
+}

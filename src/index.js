@@ -1,4 +1,1 @@
-import secondScript from './script.js'
-import styleFile from './styles/style.sass'
-
-secondScript();
+import './styles/style.scss'

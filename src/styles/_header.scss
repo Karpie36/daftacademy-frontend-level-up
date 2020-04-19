@@ -1,0 +1,72 @@
+
+.page-header {
+  @include itemSize(1920px, 550px);
+  background-image: url('./../img/page-header_img.png');
+  padding: 0 297px;
+
+  .page-brand {
+    @include itemSize(0px, 0px);
+
+    .logo-zonex {
+      @include itemSize(117px, 22px);
+      object-fit: contain;
+      position: absolute;
+      top: 34px;
+      left: 902px;
+    }
+  }
+
+  .page-navigation {
+    @include itemSize(1326px, 90px);
+    margin: 0;
+
+    .page-navigation__items {
+      @include itemSize(375px, 21px);
+      margin: 0;
+
+      .page-navigation__item {
+        @extend .Text-Style-4;
+        color: #151515;
+        padding: 0 0 5px 0;
+
+        &:hover {
+          border-bottom: 2px solid #151515;
+        }
+      }
+    }
+
+    .page-navigation__icons {
+      .page-navigation__icon {
+        object-fit: contain;
+        padding: 0 10px;
+        margin: 0;
+
+        .page-navigation__link {
+          .kz-user {
+            @include itemSize(17px, 17px);
+          }
+
+          .kz-bag {
+            @include itemSize(16px, 16px);
+          }
+
+          .Ellipse-1 {
+            @include itemSize(16px, 16px);
+          }
+
+          .page-navigation__number {
+            @include itemSize(6px, 9px);
+            @include fontParameters(Jost, 10px, bold, normal, normal);
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+            top: -16px;
+            left: 5px;
+          }
+        }
+      }
+    }
+  }
+}

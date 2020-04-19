@@ -1,0 +1,52 @@
+
+.page-content {
+
+  .content-section {
+    padding: 0 297px;
+
+    .content-section__header {
+
+    }
+  }
+
+  .carousel-section {
+    @include itemSize(1920px, 438px);
+    background-color: #263a49;
+    padding: 0;
+
+    .carousel-section__control {
+      @include itemSize(297px, 438px);
+      display: block;
+      position: relative;
+    }
+
+    .carousel-products {
+      @include itemSize(1326px, 338px);
+      padding: 50px 0;
+
+      .carousel-products__items {
+
+      }
+    }
+  }
+
+  .arrivals-section {
+    @include itemSize(1920px, 1487px);
+
+    .arrivals-section__header {
+      @include itemSize(267px, 40px);
+      background-color: #ffffff;
+      display: block;
+      padding: 108px 826px;
+      font-family: Jost;
+      font-size: 48px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #151515;
+    }
+  }
+}

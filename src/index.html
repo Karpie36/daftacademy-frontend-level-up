@@ -6,8 +6,109 @@
   <title>Document</title>
 </head>
 <body>
-  <section>
-    <h1>Hello World!</h1>
-  </section>
+  <header class="page-header">
+    <h1 class="page-brand">
+      <img src="img/logo-zonex.png"
+           srcset="img/logo-zonex@2x.png 2x,
+             img/logo-zonex@3x.png 3x"
+           class="logo-zonex">
+    </h1>
+    <nav class="page-navigation row justify-content-between align-items-center">
+      <ul class="page-navigation__items row justify-content-between">
+        <li class="page-navigation__item">
+          <a class="page-navigation__link">Home</a>
+        </li>
+        <li class="page-navigation__item">
+          <a class="page-navigation__link">Shop</a>
+        </li>
+        <li class="page-navigation__item">
+          <a class="page-navigation__link">Elements</a>
+        </li>
+        <li class="page-navigation__item">
+          <a class="page-navigation__link">Blog</a>
+        </li>
+        <li class="page-navigation__item">
+          <a class="page-navigation__link">Page</a>
+        </li>
+      </ul>
+      <ul class="page-navigation__icons row">
+        <li class="page-navigation__icon">
+          <a class="page-navigation__link">
+            <img src="img/kz-user.png"
+                 srcset="img/kz-user@2x.png 2x,
+               img/kz-user@3x.png 3x"
+                 class="kz-user">
+          </a>
+        </li>
+        <li class="page-navigation__icon">
+          <a class="page-navigation__link">
+            <img src="img/kz-bag.png"
+                 srcset="img/kz-bag@2x.png 2x,
+               img/kz-bag@3x.png 3x"
+                 class="kz-bag">
+          </a>
+        </li>
+        <li class="page-navigation__icon">
+          <a class="page-navigation__link">
+            <img src="img/ellipse-1.png"
+                 srcset="img/ellipse-1@2x.png 2x,
+               img/ellipse-1@3x.png 3x"
+                 class="Ellipse-1">
+            <div class="page-navigation__number">3</div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-content">
+    <section class="content-section carousel-section">
+      <div class="carousel carousel-multi-item">
+        <a class="carousel-section__control left carousel-control" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon justify-self-center align-self-center" aria-hidden="true"></span>
+        </a>
+        <ul class="carousel-products carousel-inner">
+          <li class="carousel-products__items carousel-item active">
+            <img src="img/product_carousel.png"
+                 class="carousel-products__image">
+          </li>
+          <li class="carousel-products__items carousel-item">
+            <img src="img/product_carousel.png"
+                 class="carousel-products__image">
+          </li>
+          <li class="carousel-products__items carousel-item">
+            <img src="img/product_carousel.png"
+                 class="carousel-products__image">
+          </li>
+          <li class="carousel-products__items carousel-item">
+            <img src="img/product_carousel.png"
+                 class="carousel-products__image">
+          </li>
+          <li class="carousel-products__items carousel-item">
+            <img src="img/product_carousel.png"
+                 class="carousel-products__image">
+          </li>
+          <li class="carousel-products__items carousel-item">
+            <img src="img/product_carousel.png"
+                 class="carousel-products__image">
+          </li>
+          <li class="carousel-products__items carousel-item">
+            <img src="img/product_carousel.png"
+                 class="carousel-products__image">
+          </li>
+          <li class="carousel-products__items carousel-item">
+            <img src="img/product_carousel.png"
+                 class="carousel-products__image">
+          </li>
+        </ul>
+        <a class="carousel-section__control right carousel-control justify-content-center align-items-center" role="button" data-slide="next">
+          <span class="carousel-control-next-icon justify-self-center align-self-center" aria-hidden="true"></span>
+        </a>
+      </div>
+    </section>
+    <section class="content-section arrivals-section">
+      <h2 class="content-section__header arrivals-section__header">New Arrivals</h2>
+
+    </section>
+  </main>
 </body>
 </html>
