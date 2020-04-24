@@ -1,0 +1,36 @@
+
+.page-footer {
+  @include itemSize(1920px, 150px);
+
+  .footer-container {
+    border-top: solid 1px #959595;
+    max-width: 1326px;
+    padding-top: 40px;
+    height: 100%;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: row;
+
+    .social-links__link {
+      padding: 0 5px;
+    }
+  }
+
+  .policy-links {
+    display: flex;
+    flex-direction: row;
+
+    .policy-links__link {
+      padding: 0 15px;
+      text-decoration: none;
+      color: #151515;
+    }
+  }
+
+  .footer-options {
+    display: flex;
+    flex-direction: row;
+  }
+}

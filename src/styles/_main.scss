@@ -2,42 +2,47 @@
 .page-content {
 
   .content-section {
-    padding: 0 297px;
 
     .content-section__header {
 
     }
+
+    .content-section__container {
+      max-width: 1326px;
+    }
   }
 
   .carousel-section {
-    @include itemSize(1920px, 438px);
+    //@include itemSize(1920px, 438px);
     background-color: #263a49;
-    padding: 0;
-
-    .carousel-section__control {
-      @include itemSize(297px, 438px);
-      display: block;
+    //padding: 0;
+    .carousel-container {
+      padding: 50px 297px;
       position: relative;
     }
 
     .carousel-products {
-      @include itemSize(1326px, 338px);
-      padding: 50px 0;
+      overflow: hidden;
 
-      .carousel-products__items {
-
+      .carousel-products__images {
+        width: 1450px;
+        display: inline-flex;
+        justify-content: space-between;
+        transition: transform 0.5s;
       }
+
     }
+
   }
 
   .arrivals-section {
-    @include itemSize(1920px, 1487px);
+    @include itemSize(1920px, 2117px);
 
     .arrivals-section__header {
-      @include itemSize(267px, 40px);
-      background-color: #ffffff;
-      display: block;
-      padding: 108px 826px;
+      @include itemSize(1920px, 256px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-family: Jost;
       font-size: 48px;
       font-weight: 500;
@@ -45,8 +50,218 @@
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
+      color: #151515;
+    }
+
+    .arrivals-products {
+
+      .arrivals-products__item {
+
+        .arrivals-products__info {
+          padding: 27px 0;
+
+          .arrivals-products__category {
+            margin: 0 0 11px 0;
+
+            .arrivals-products__category-icon {
+              padding-right: 6px;
+            }
+
+            .arrivals-products__category-name {
+              font-family: Jost;
+              font-size: 10px;
+              font-weight: 900;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              text-align: left;
+              color: #111;
+              text-transform: uppercase;
+            }
+          }
+
+          .arrivals-products__name {
+            font-family: Jost;
+            font-size: 13px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #454545;
+            margin-bottom: 11px;
+          }
+
+          .arrivals-products__price {
+            font-family: Jost;
+            font-size: 13px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #151515;
+            margin-bottom: 11px;
+
+            .arrivals-products__price-old {
+              padding-left: 10px;
+              text-decoration: line-through;
+              color: #959595;
+            }
+          }
+        }
+      }
+    }
+
+    .all-products__frame {
+      @include itemSize(1920px, 190px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .all-products__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include itemSize(136px, 48px);
+        font-family: Jost;
+        font-size: 13px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #151515;
+        border: solid 2px #151515;
+      }
+    }
+
+    .arrivals-categories {
+      @include itemSize(1920px, 630px);
+
+      .school_and_jewelery_container {
+        height: 317px;
+      }
+
+      .arrivals-categories__item {
+        position: relative;
+
+        .arrivals-categories__image {
+          position: absolute;
+        }
+
+        .arrivals-categories__header {
+          position: absolute;
+          top: 41px;
+          left: 41px;
+
+          .arrivals-categories__name {
+            font-family: Jost;
+            font-size: 24px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #151515;
+            margin-bottom: 18px;
+          }
+
+          .arrivals-categories__btn {
+            font-family: Jost;
+            font-size: 13px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #151515;
+            background-color: transparent;
+            border: none;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          .arrivals-categories__btn {
+            border-bottom: 2px solid #151515;
+          }
+        }
+      }
+    }
+  }
+
+  .newsletter-section {
+    @include itemSize(1920px, 406px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 97px 0;
+
+    .newsletter-section__header {
+      font-family: Jost;
+      font-size: 30px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
       text-align: left;
       color: #151515;
+      padding-bottom: 35px;
+    }
+
+    .newsletter-container {
+
+      .newsletter-info {
+        font-family: Jost;
+        font-size: 16px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        padding-bottom: 30px;
+      }
+
+      .newsletter-form {
+        display: flex;
+        flex-direction: row;
+        width: 649px;
+
+        .form-input {
+          border: none;
+          border-bottom: solid 2px #151515;
+        }
+
+        .form-btn {
+          background-color: transparent;
+          border: none;
+          border-bottom: solid 2px #151515;
+        }
+
+        .form-label {
+          font-family: Jost;
+          font-size: 13px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: #454545;
+          padding-top: 10px;
+        }
+      }
     }
   }
 }
