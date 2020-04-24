@@ -1,1 +1,1 @@
-Do first daftacademy frontend level up homework
+Do daftacademy frontend level up homework
