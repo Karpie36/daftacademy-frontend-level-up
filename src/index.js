@@ -5,10 +5,11 @@ import {module} from './module';
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    module.makeGliderObject();
+    module.getCarouselParameters();
     module.resetScroll();
     module.makeScrollBtnListener();
     module.controlScrollUpVisible();
     module.changeYearToPresent();
+    module.getProductParameters();
     module.makeAllProductsBtnListener();
 });

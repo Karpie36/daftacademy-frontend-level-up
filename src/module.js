@@ -30,7 +30,7 @@ export const module = (function () {
 
     const makeScrollBtnListener = function () {
         $(".scroll-up").click(() => {
-            $("html, body").animate({ scrollTop: 0 }, "slow");
+            $("html, body").animate({ scrollTop: 0 }, "fast", "linear");
             return false;
         });
     };
@@ -52,25 +52,86 @@ export const module = (function () {
         $(".present-year").html(presentYear);
     }
 
+    const getCarouselParameters = function () {
+
+        const carouselLoadingInterval = setInterval(() => {
+            console.log('Loading...')
+        }, 100)
+
+        $.ajax(
+            {
+                url: "/carousel",
+                type: 'GET',
+                dataType: 'json',
+                success: function(json)
+                {
+                    createCarouselElements(json.carousel_element)
+                    makeGliderObject()
+                },
+                error: function(data)
+                {
+                    console.error(data)
+                },
+                complete: function () {
+                    clearInterval(carouselLoadingInterval)
+                }
+            });
+    }
+
+    const createCarouselElements = function (newCarouselElement) {
+
+
+        for(let i=0; i < 8; i++) {
+            $(".glider").append(newCarouselElement);
+        }
+    }
+
+    const getProductParameters = function () {
+
+        const productsLoadingInterval = setInterval(() => {
+            console.log('Loading...')
+        }, 100)
+
+        $.ajax(
+            {
+                url: "/all_products",
+                type: 'GET',
+                dataType: 'json',
+                success: function(json)
+                {
+                    createAllProductsElements(json.product_element)
+                },
+                error: function(data)
+                {
+                    console.error(data)
+                },
+                complete: function () {
+                    clearInterval(productsLoadingInterval)
+                }
+            });
+    }
+
+    const createAllProductsElements = function (newProductsElement) {
+
+        for(let i=0; i < 8; i++) {
+            $(".products").append(newProductsElement);
+        }
+    }
+
     const makeAllProductsBtnListener = function () {
         $(".view-all-products").click(() => {
-
-            const newProductsElements =  '<div class="pt-4 col-6 col-md-3"><div class="card"><img src="https://via.placeholder.com/309x390" class="item-pic-placeholder card-img-top" alt="Item placeholder"><div class="card-body"> <h5 class="card-title"><img class="icon-placeholder" src="./assets/9 View mobile/kz-number-one.svg" alt="Number One icon">ICON PLACEHOLDER </h5> <p class="card-product__name">PRODUCT NAME PLACEHOLDER</p><p class="card-product__price">PRICE $ <span class="card-product__sale">SALES $</span></p><div class="card-action d-flex justify-content-between"><button class="card-action__buy btn">ADD TO CARD </button><button class="btn card-action__save"><img src="./assets/9 View mobile/-e-kz-heart.svg" alt="Hearth icon"></button></div></div></div></div>';
-
-            for(let i=0; i < 8; i++) {
-                $(".products").append(newProductsElements);
-            }
-
+            getProductParameters();
             $(".view-all-products").hide();
         });
     }
 
     return {
-        makeGliderObject,
         resetScroll,
         makeScrollBtnListener,
         controlScrollUpVisible,
         changeYearToPresent,
+        getCarouselParameters,
+        getProductParameters,
         makeAllProductsBtnListener
     }
 })();
