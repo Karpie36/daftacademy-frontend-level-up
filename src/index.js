@@ -11,5 +11,6 @@ window.addEventListener('DOMContentLoaded', () => {
     module.controlScrollUpVisible();
     module.changeYearToPresent();
     module.getProductParameters();
+    module.getBlogParameters();
     module.makeAllProductsBtnListener();
 });

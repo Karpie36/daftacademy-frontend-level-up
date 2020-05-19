@@ -118,6 +118,35 @@ export const module = (function () {
         }
     }
 
+    const getBlogParameters = function () {
+
+        const blogLoadingInterval = setInterval(() => {
+            console.log('Loading...')
+        }, 100)
+
+        $.ajax(
+            {
+                url: "/blog",
+                type: 'GET',
+                dataType: 'json',
+                success: function(json)
+                {
+                    createBlogElements(json.blog_element)
+                },
+                error: function(data)
+                {
+                    console.error(data)
+                },
+                complete: function () {
+                    clearInterval(blogLoadingInterval)
+                }
+            });
+    }
+
+    const createBlogElements = function (newBlogElement) {
+        $(".blog").append(newBlogElement);
+    }
+
     const makeAllProductsBtnListener = function () {
         $(".view-all-products").click(() => {
             getProductParameters();
@@ -132,6 +161,7 @@ export const module = (function () {
         changeYearToPresent,
         getCarouselParameters,
         getProductParameters,
+        getBlogParameters,
         makeAllProductsBtnListener
     }
 })();
